@@ -1,0 +1,379 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+h2{
+    font-size: 1.3rem;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+}
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.dot-hr{
+    border: dotted 5px whitesmoke;
+    border-bottom: none;
+    margin: 25px auto;
+    width: 15%;
+}
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+[class*="ccol-"]{ 
+    width: 100%;
+}
+
+/* navbar star */
+.navbar{
+    text-align: center;
+    background-color: rgb(3, 59, 59);
+    padding: 1% 7%;
+    color: white;
+    
+}
+
+.navlogo img{
+    border: 2px solid #0c0203fb;
+    height: 110px;
+    width: 100px;
+	border-radius: 50%;
+}
+.navbar h1{
+    margin: 0;
+    padding: 10px;
+    font-size: 2.7rem;
+}
+.navmenu{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.navmenu a{
+    background-color: rgb(1, 24, 24);
+    border-radius: 10px;
+    margin: 4px 10px;
+    padding: 1px 20px;
+}
+.navmenu a:hover{
+    background-color: tomato;
+}
+
+.navbar::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* navbar end */
+
+/* profile part start */
+.profile{
+    padding: 120px 10px;
+    position: relative;
+    text-align: center;
+}
+.profile img{
+    width: 40px;
+    height: 50px;
+}
+.profile .top-icon{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    transition: transform 3s;
+}
+.profile .top-icon:hover{
+    transform: scale(1.5);
+}
+.profile-desc h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+}
+.profile-desc p{
+    margin: 0 auto 20px auto;
+    text-align: center;
+    width: 90%;
+}
+.profile .bottom-icon{
+    position: absolute;
+    left: 60px;
+    bottom: 10px;
+    transition: transform 1s;
+}
+.profile .bottom-icon:hover{
+    transform: scale(1.5);
+}
+
+/* profile end  */
+
+/* about me start  */
+
+.about-me{
+    background-color: rgb(3, 59, 59);
+    padding: 1% 7%;
+    margin: 10px 0;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.about-image{
+    text-align: center;
+}
+.about-image img{
+    width: 190px;
+    height: 210px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+.about-me p{
+    text-align: center;
+}
+.about-me a{
+    font-size: 1.2rem;
+}
+.cv-button{
+    background-color: rgb(1, 12, 12);
+    color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+}
+.about-me::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+/* anout me ended */
+
+/* professional exprience start */
+.professional-expr{
+    padding: 1% 5%;
+    
+}
+.professional-expr .card{
+    background-color: rgb(78, 76, 76);
+    border-radius: 4px;
+    padding: 10px;
+    transition: 0.6s;
+    height:600px;
+    width: 450px;
+    color: white;
+}
+.ski h2{
+    margin: 5px auto;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 5px black;
+}
+.professional-expr::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+.card-icon{
+    text-align: center;
+}
+.card-icon img{
+    width: 100px;
+    height: 120px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+.card-title h2{
+    background-color: rgb(56, 49, 49);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.skill-container{
+    /* background-color: bisque; */
+    padding-right: 50px;
+}
+.skill-container li{
+    list-style-type: none;
+    margin: 50px 0;
+    font-weight: bolder;
+    position: relative;
+}
+.skill-container li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    background-color: rgb(32, 228, 228);
+    
+    width: 100%;
+    height: 15px;
+    
+    border-radius: 100px;
+}
+.skill-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    background-color: rgb(239, 253, 242);
+    
+    width: 0;
+    height: 15px;
+    
+    border-radius: 100px;
+
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+.skill-container li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+    to{
+        width: 85%;
+        background: tomato;
+    }
+}
+.skill-container li.css::after{
+    animation-name: css;
+   
+}
+@keyframes css {
+     to{
+        width: 70%;
+        background: red;
+    }
+}
+.skill-container li.php::after{
+    animation-name: php;
+   
+}
+@keyframes php {
+     to{
+        width: 15%;
+        background: rgb(92, 3, 3);
+    }
+}
+.skill-container li.js::after{
+    animation-name: js;
+   
+}
+@keyframes js {
+     to{
+        width: 40%;
+        background: rgb(129, 236, 6);
+    }
+}
+
+.skill-container li.cpp::after{
+    animation-name: cpp;
+   
+}
+@keyframes cpp {
+     to{
+        width: 80%;
+        background: rgb(233, 7, 101);
+    }
+}
+/* professional exprience ended */
+
+/* for contact start  */
+.contact-section{
+    padding: 1% 7%;
+    background-color: teal;
+    color: white;
+}
+.contact{
+    text-align: center;
+}
+.contact input, textarea{
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    resize: none;
+}
+.contact button{
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(2, 17, 16);
+    color: white;
+    cursor: pointer;
+    padding-right: 15px;
+    margin: 10px;
+    width: 100px;
+}
+.more-contact{
+    text-align: center;
+}
+.more-contact h2{
+    width: 440px;
+    margin: 10px auto;
+}
+
+
+.media{
+    /* background-color: cornflowerblue; */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.media > button{
+    display: flex;
+    font-size: 2rem;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.contact-section::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+/* ends  */
+
+/* footer start  */
+.footer-section{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.footer-section a{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+}
+.footer-section p{
+    text-align: center;
+}
+.footer-section::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+/* footer ended  */
